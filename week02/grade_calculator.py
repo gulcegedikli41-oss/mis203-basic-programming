@@ -26,5 +26,5 @@ while True:
 if total_student == 0:
     print("No students entered.")
 else:
-    print(f"Total Students: {total_student}")
+    print(f"Total students: {total_student}")
     print(f"Average score: {total_score/total_student:.2f}")

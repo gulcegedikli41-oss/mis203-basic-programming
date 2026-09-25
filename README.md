@@ -49,5 +49,7 @@ for information in all_information:
 - *I added total_student and total_score variables and gave them a value of 0 before the while loop.*
 - *I added one to the total_student variable and added the score variable to the total_score variable in the loop.*
 - *I added an if condition and an else block outside the loop.*
-<br>
-**What does break do in your program?** *break in my program allows me to control the if condition and the else block outside the loop by skipping the else block in the loop if the if condition is true.*
+  <br>
+**What does break do in your program?**
+  <br>
+*break in my program allows me to control the if condition and the else block outside the loop by skipping the else block in the loop if the if condition is true.*

@@ -61,7 +61,7 @@ while True:
     if name == "q":
         break
     else:
-        score = float(input("Enter score:"))
+        score = int(input("Enter score:"))
         if score < 0 or score > 100:
             print("Invalid score. Please enter a number between 0 and 100.")
             continue
@@ -88,7 +88,7 @@ while True:
     if name == "q":
         break
     else:
-        score = float(input("Enter score:"))
+        score = int(input("Enter score:"))
         if score < 0 or score > 100:
             print("Invalid score. Please enter a number between 0 and 100.")
             continue

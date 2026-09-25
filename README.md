@@ -39,3 +39,15 @@ all_information =[f"---Student Profile---", f"Name: {name}", f"Department: {depa
 for information in all_information:
   print(information)
 ```
+## WEEK 02
+**AI Tool Used:** *Gemini*
+<br>
+**Prompt Used:** *Yazdığım ekran resmindeki kodda toplam öğrenci sayısını ve not ortalamasını nasıl bulacağımı anlatmanı ve aynı zamanda kodumda hata olup olmadığını kontrol etmeni istiyorum.*
+<br>
+**What did you change?**
+<br>
+- *I added total_student and total_score variables and gave them a value of 0 before the while loop.*
+- *I added one to the total_student variable and added the score variable to the total_score variable in the loop.*
+- *I added an if condition and an else block outside the loop.*
+<br>
+**What does break do in your program?** *break in my program allows me to control the if condition and the else block outside the loop by skipping the else block in the loop if the if condition is true.*

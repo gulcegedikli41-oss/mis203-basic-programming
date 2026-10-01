@@ -117,6 +117,9 @@ else:
 <br>
 **Prompt Used:** 
 
+<img width="416" height="760" alt="image" src="https://github.com/user-attachments/assets/14c383d7-19bf-443f-88f6-14424aa475fc" />
+
+
 ```python
 total_ticket = 0
 free_ticket = 0

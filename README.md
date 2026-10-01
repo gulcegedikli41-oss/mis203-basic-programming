@@ -112,3 +112,97 @@ else:
     print(f"Total students: {total_student}")
     print(f"Average score: {total_score/total_student:.2f}")
 ````
+## WEEK 03
+**AI Tool Used:** *Claude*
+<br>
+**Prompt Used:** 
+
+```python
+total_ticket = 0
+free_ticket = 0
+total_price = 0
+while True:
+    customer_name = input("Customer name (or q to quit): ")
+    if customer_name == "q" or customer_name == "Q":
+      print("No tickets sold.")
+      break
+    customer_age = int(input("Age: "))
+    if customer_age < 0 or customer_age > 120:   
+        print("Invalid age.")
+        continue
+    day = input("Day (weekday/weekend): ").strip().lower()
+    if day != "weekend" and day != "weekday":
+        print("Invalid day.")
+        continue
+    if day == "weekend":
+        ticket_price = 250
+    elif day == "weekday":
+        ticket_price = 200
+    student = input("Student (yes/no): ").strip().lower()
+    if student != "yes" and student != "no":
+        print("Please answer yes or no.")
+        continue
+    if customer_age < 6:
+        free_ticket += 1
+        ticket_price = 0
+        category = "Free"
+    elif customer_age >= 65:
+        ticket_price = ticket_price*0.5
+        category = "Senior"
+    elif 6 <= customer_age <= 12:
+        ticket_price = ticket_price*0.6
+        category = "Child"
+    elif customer_age <= 25 and student == "yes":
+        ticket_price = ticket_price*0.7
+        category = "Student"
+    else:
+        category = "Standard"
+    total_ticket += 1
+    total_price += ticket_price
+    print(f"{customer_name}: {ticket_price:.2f} TRY ({category})")
+    print(f"Tickets sold: {total_ticket}")
+    print(f"Total revenue: {total_price:.2f} TRY")
+    print(f"Average price: {(total_price / total_ticket):.2f} TRY")
+    print(f"Free tickets: {free_ticket}")
+
+
+```
+
+*Bu kodu çalıştırdığımda, resimdeki girdileri girerken en son döngüyü bitirmek için q ya da Q girdiğimde sadece No tickets sold yazdırıyor, ama ben resimdeki örnek gibi q ya da Q girdiğimde önceki girdilerin toplamını yazmasını istiyorum ve ilk başta sadece q ya da Q girdiğimde de sadece No tickets sold yazdırsın istiyorum. Buna ek olarak sadece koddaki komutları, döngüleri ve koşullu ifadeleri biliyorum.*
+
+
+**What did you change?:**
+
+### First Version
+
+````python
+if customer_name == "q" or customer_name == "Q":
+        print("No tickets sold.")
+        break
+````
+
+*In this section of the code, I added the if condition and the else block under the above if condition. I checked whether the if condition, total_ticket is 0 or not, and if total_ticket is not 0, I wanted it to print the sum of all controls when the loop finished by entering Q or q in the else block. I added the break command to the if condition and the else block in the above if condition at the same indentation level because the loop must be exited and the sum of all controls when I write q or  Q.*
+
+
+### Final Version
+
+````python
+if customer_name == "q" or customer_name == "Q":
+      if total_ticket == 0:
+        print("No tickets sold.")
+      else:
+        print(f"Tickets sold: {total_ticket}")
+        print(f"Total revenue: {total_price:.2f} TRY")
+        print(f"Average price: {(total_price / total_ticket):.2f} TRY")
+        print(f"Free tickets: {free_ticket}") 
+      break
+````
+
+**Tests**
+1. *Input: Ali, 30, weekend, no → Output: Ali: 250.00 TRY (Standard)*
+2. *Input: Elif, 65, weekday, no → Output: Elif: 100.00 TRY (Senior)* ***(boundary age)***
+3. *Input: Deniz, 10, weekday, yes → Output: Deniz: 120.00 TRY (Child)*
+
+
+**Why does the order of the rules matter?**
+*The order of the rules matters because changing the place of the condition might change the printed text. For example, if the student condition comes before the child condition, the discount is applied at 30% instead of %40 for the student of 10 years old in the test section.*

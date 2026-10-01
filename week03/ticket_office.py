@@ -4,13 +4,6 @@ total_price = 0
 while True:
     customer_name = input("Customer name (or q to quit): ")
     if customer_name == "q" or customer_name == "Q":
-      if total_ticket == 0:
-        print("No tickets sold.")
-      else:
-        print(f"Tickets sold: {total_ticket}")
-        print(f"Total revenue: {total_price:.2f} TRY")
-        print(f"Average price: {(total_price / total_ticket):.2f} TRY")
-        print(f"Free tickets: {free_ticket}") 
       break
     customer_age = int(input("Age: "))
     if customer_age < 0 or customer_age > 120:   
@@ -46,3 +39,10 @@ while True:
     total_ticket += 1
     total_price += ticket_price
     print(f"{customer_name}: {ticket_price:.2f} TRY ({category})")
+if total_ticket == 0:
+    print("No tickets sold.")
+else:
+    print(f"Tickets sold: {total_ticket}")
+    print(f"Total revenue: {total_price:.2f} TRY")
+    print(f"Average price: {(total_price / total_ticket):.2f} TRY")
+    print(f"Free tickets: {free_ticket}") 

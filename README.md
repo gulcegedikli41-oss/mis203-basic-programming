@@ -291,4 +291,4 @@ else:
 
 
 **Why does the order of the rules matter?**
-*The order of the rules matters because changing the order of the conditions will change the printed text. For example, if the student condition comes before the child condition, the discount is applied at 30% instead of %40 for the student of 10 years old in the test section.*
+*The order of the rules matters because changing the order of the conditions will change the applied discount. For example, if the student condition comes before the child condition, the discount is applied at 30% instead of %40 for the student of 10 years old in the test section.*

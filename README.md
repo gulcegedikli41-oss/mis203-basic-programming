@@ -295,5 +295,6 @@ else:
 
 # Week 04
 **AI Tool Used:** *Yuanbao*
+<br>
 **Prompt Used:** *Bu ekran resminde anlatılana göre python programlama diline uygun olacak şekilde bana bir tane görev vereceksin. Bende bu görevi yerine getirince sana göndereceğim ve sende kontrol edeceksin. Bu arada python hakkında bildiklerim while for döngüleri ile if elif else koşullu yapıları. Bunlarıda göz önüne almanı ve bunlar dışında başka koşullu ifadeler ve döngü yapıları kullanmayacağım şekilde vereceğin görevi ayarlamanı istiyorum.*
 

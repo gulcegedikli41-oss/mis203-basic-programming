@@ -292,3 +292,8 @@ else:
 
 **Why does the order of the rules matter?**
 *The order of the rules matters because changing the order of the conditions will change the applied discount. For example, if the student condition comes before the child condition, the discount is applied at 30% instead of %40 for the student of 10 years old in the test section.*
+
+# Week 04
+**AI Tool Used:** *Yuanbao*
+**Prompt Used:** *Bu ekran resminde anlatılana göre python programlama diline uygun olacak şekilde bana bir tane görev vereceksin. Bende bu görevi yerine getirince sana göndereceğim ve sende kontrol edeceksin. Bu arada python hakkında bildiklerim while for döngüleri ile if elif else koşullu yapıları. Bunlarıda göz önüne almanı ve bunlar dışında başka koşullu ifadeler ve döngü yapıları kullanmayacağım şekilde vereceğin görevi ayarlamanı istiyorum.*
+
